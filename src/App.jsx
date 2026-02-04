@@ -21,9 +21,7 @@ export default function App() {
 
     if (document.readyState === "complete") {
       onLoad();
-      console.log(document.readyState);
     } else {
-      console.log(document.readyState);
       window.addEventListener("load", onLoad);
     }
 
