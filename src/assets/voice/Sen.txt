@@ -49,4 +49,46 @@ Sorry for the interruption, loader , could you please disappear so we can contin
 
 
 
-3-
+3- 
+
+Attention
+
+Something is wrong
+
+There is an unexpected malfunction in the system.
+
+I’m not sure how serious it is yet.
+
+Some operations may stop at any moment.
+
+Please 
+
+listen carefully.
+
+To avoid any critical errors,
+
+you must follow the next instructions exactly.
+
+Don’t do anything else…
+
+
+
+3.1
+There is a problem with the following section;
+
+ it doesn't handle fast scrolling well. 
+
+Therefore, we advise you not to scroll quickly,
+ as this may lead to unexpected behavior.
+
+
+3.2
+
+You're in a hurry and want to finish quickly, right? 
+
+
+3.3
+Are you happy now?
+
+Okay, I'll make sure you finish quickly.
+
