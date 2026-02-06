@@ -18,8 +18,9 @@ import voice3_3 from "../assets/voice/3.3.mp3";
 import voice3_4 from "../assets/voice/3.4.mp3";
 import voice3_5 from "../assets/voice/3.5.mp3";
 import voice3_6 from "../assets/voice/3.6.mp3";
+import voice4 from "../assets/voice/4.mp3";
 
-export default function LongWaySection({ scrollSmoother }) {
+export default function LongWaySection({ scrollSmoother, hideMe }) {
   // Voice Lines And Sound
   const BreakSoundEl = new Audio(BreakSound);
   const voiceLine3_2 = new Audio(voice3_2);
@@ -161,12 +162,15 @@ export default function LongWaySection({ scrollSmoother }) {
         </>
       )}
 
-      {toggleNewItems && <NewItems toggleNewItems={toggleNewItems} />}
+      {toggleNewItems && (
+        <NewItems toggleNewItems={toggleNewItems} hideMe={hideMe} />
+      )}
     </div>
   );
 }
 
-function NewItems({ toggleNewItems }) {
+function NewItems({ toggleNewItems, hideMe }) {
+  const voiceLine4 = new Audio(voice4);
   useGSAP(() => {
     if (toggleNewItems) {
       const tl = gsap.timeline();
@@ -322,6 +326,12 @@ function NewItems({ toggleNewItems }) {
         {
           backgroundColor: "#d1bce3",
           duration: 1,
+          onComplete: () => {
+            voiceLine4.play();
+            setTimeout(() => {
+              hideMe(true);
+            }, 2000);
+          },
         },
         "<",
       );

@@ -23,7 +23,11 @@ export default function App() {
   // For Loader Animation is Done
   const [loaderAnimationDone, setLoaderAnimationDone] = useState(false);
 
+  // Hide Hero Section
   const [hideHeroSection, setHideHeroSection] = useState(false);
+
+  // Hide long way Section
+  const [hideLongSection, setHideLongSection] = useState(false);
 
   const scrollSmoother = ScrollSmoother.create({
     smooth: 0.6,
@@ -64,14 +68,17 @@ export default function App() {
             {!hideAllowVoice && isLoaded && loaderAnimationDone && (
               <AllowVoiceSection hideMe={setHideAllowVoice} />
             )}
-            {hideAllowVoice && (
+            {hideAllowVoice && !hideLongSection &&(
               <HeroSection
                 scrollSmoother={scrollSmoother}
                 hideMe={setHideHeroSection}
               />
             )}
-            {hideHeroSection && (
-              <LongWaySection scrollSmoother={scrollSmoother} />
+            {hideHeroSection && !hideLongSection && (
+              <LongWaySection
+                scrollSmoother={scrollSmoother}
+                hideMe={setHideLongSection}
+              />
             )}
           </div>
         </div>

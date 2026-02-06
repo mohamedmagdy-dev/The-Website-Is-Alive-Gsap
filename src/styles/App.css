@@ -3,7 +3,13 @@
 body {
   font-family: "Lato", sans-serif;
   overflow: hidden;
+  background-color: #C0B87A;
 }
+
+/* 005F02 */
+/* 427A43 */
+/* C0B87A */
+/* F2E3BB */
 
 .hero-section {
   letter-spacing: 4px;
