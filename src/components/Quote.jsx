@@ -1,4 +1,4 @@
-import SectionBg from "../assets/g203-video.png";
+import SectionBg from "../assets/g203-video.webp";
 
 export default function Quote() {
   return (

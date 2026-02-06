@@ -1,10 +1,10 @@
-import GhubImg1 from "../assets/g203-screen1.png";
-import GhubImg2 from "../assets/g203-screen2.png";
-import GhubImg3 from "../assets/g203-screen7.png";
-import GhubImg4 from "../assets/g102-screen4-en.png";
-import GhubImg5 from "../assets/g102-screen5-en.png";
-import GhubImg6 from "../assets/g102-screen6-en.png";
-import GhubOverlayImg from "../assets/g203-color-feature-3-desktop.png";
+import GhubImg1 from "../assets/g203-screen1.webp";
+import GhubImg2 from "../assets/g203-screen2.webp";
+import GhubImg3 from "../assets/g203-screen7.webp";
+import GhubImg4 from "../assets/g102-screen4-en.webp";
+import GhubImg5 from "../assets/g102-screen5-en.webp";
+import GhubImg6 from "../assets/g102-screen6-en.webp";
+import GhubOverlayImg from "../assets/g203-color-feature-3-desktop.webp";
 
 export default function GhubSection() {
   return (

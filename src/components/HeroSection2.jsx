@@ -1,6 +1,6 @@
-import g102TopWhiteImg from "../assets/g203-mouse-top-angle-white-gallery-1 (1).png";
-import g102TopBlueImg from "../assets/logitech-g102-lightsync-rgb-6-gaming-mouse-blue.png";
-import g102TopBlackImg from "../assets/g203-mouse-top-angle-black-gallery-1.png";
+import g102TopWhiteImg from "../assets/g203-mouse-top-angle-white-gallery-1 (1).webp";
+import g102TopBlueImg from "../assets/logitech-g102-lightsync-rgb-6-gaming-mouse-blue.webp";
+import g102TopBlackImg from "../assets/g203-mouse-top-angle-black-gallery-1.webp";
 
 export default function HeroSection() {
   return (

@@ -8,10 +8,10 @@ import voice3 from "../assets/voice/3.mp3";
 import voice3_1 from "../assets/voice/3.1.mp3";
 
 // Imgs
-import BgImg1 from "../assets/imgs/3d/Backpack (no shadow).png";
-import BgImg2 from "../assets/imgs/3d/Coin.png";
-import BgImg3 from "../assets/imgs/3d/Notebook.png";
-import BgImg4 from "../assets/imgs/3d/Pineapple.png";
+import BgImg1 from "../assets/imgs/3d/Backpack (no shadow).webp";
+import BgImg2 from "../assets/imgs/3d/Coin.webp";
+import BgImg3 from "../assets/imgs/3d/Notebook.webp";
+import BgImg4 from "../assets/imgs/3d/Pineapple.webp";
 
 import { useRef } from "react";
 
@@ -26,13 +26,9 @@ export default function HeroSection({ scrollSmoother, hideMe }) {
       ease: "elastic",
     });
 
+    scrollSmoother.paused(true);
     // Add Delay For Section
-    tl.to(".bg-img", {
-      delay: 1,
-      onStart: () => {
-        scrollSmoother.paused(true);
-      },
-    });
+
     const heroText = gsap.utils.toArray(".hero-text");
     heroText.forEach((text) => {
       const splitText = SplitText.create(text, { type: "chars" });
@@ -92,9 +88,7 @@ export default function HeroSection({ scrollSmoother, hideMe }) {
         }, 20000);
       },
       // Show Long Way Section
-      onStart: () => {
-        hideMe(true);
-      },
+
     });
 
     // Start Scrolling After Finish All Voice Lines
@@ -102,9 +96,8 @@ export default function HeroSection({ scrollSmoother, hideMe }) {
       delay: 34.5,
       duration: 2,
       xPercent: 100,
-
       onComplete: () => {
-        scrollSmoother.paused(false);
+        hideMe(true);
         document.body.style.overflow = "auto";
       },
     });
@@ -119,19 +112,19 @@ export default function HeroSection({ scrollSmoother, hideMe }) {
         <span className="hero-text text-lg lg:text-6xl">WE DON't WRITE</span>
         <img src={BgImg1} alt="bg1" className="bg-img w-18 lg:w-30 " />
       </div>
-      <div className="flex items-center gap-5 max-md:m-20">
+      <div className="flex items-center gap-5 max-md:mt-5">
         <img src={BgImg2} alt="bg2" className="bg-img w-20 lg:w-40" />
         <span className="hero-text rotated-item text-2xl lg:text-[250px] text-[#d63838]">
           CODE
         </span>
       </div>
-      <div className="flex items-center gap-5 max-md:m-20">
+      <div className="flex items-center gap-5 max-md:mt-5">
         <span className="hero-text drop-item lg:text-6xl max-md:-mt-20">
           WE CREATE
         </span>
         <img src={BgImg4} alt="bg4" className="bg-img w-15 lg:w-20 " />
       </div>
-      <div className="flex items-center gap-5 max-md:m-20">
+      <div className="flex items-center gap-5 max-md:mt-5">
         <img src={BgImg3} alt="bg3" className="bg-img  w-20 lg:w-40" />
         <span className="hero-text text-2xl lg:text-[250px] text-[#d63838]">
           ART

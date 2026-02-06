@@ -1,4 +1,4 @@
-import Logo from "../assets/logetechLogoSq.jpg";
+import Logo from "../assets/logetechLogoSq.webp";
 
 export default function Header() {
   return (

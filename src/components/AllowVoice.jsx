@@ -162,12 +162,12 @@ export default function AllowVoice({ hideMe }) {
 
                 xPercent: 100,
                 duration: 3,
-                delay: 5,
+                delay: 4,
               });
 
               tl.to(".move-section", {
                 xPercent: 100,
-                duration: 3,
+                duration: 1,
                 onComplete: () => {
                   hideMe(true);
                 },

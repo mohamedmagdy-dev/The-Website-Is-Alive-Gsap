@@ -1,4 +1,4 @@
-import MouseBottomImg from "../assets/g203-mouse-bottom-angle-white-gallery-5.png";
+import MouseBottomImg from "../assets/g203-mouse-bottom-angle-white-gallery-5.webp";
 
 export default function AboutMouse() {
   return (

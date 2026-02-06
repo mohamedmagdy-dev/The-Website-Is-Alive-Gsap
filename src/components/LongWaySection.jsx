@@ -8,8 +8,8 @@ import { useRef, useState } from "react";
 // Imgs
 import cardImg1 from "../assets/imgs/bg/Project-f1.BXJzh_3J_3nr1X.webp";
 import cardImg2 from "../assets/imgs/bg/Project-harpie.BJnGIMm3_1SiYxe.webp";
-import rocket from "../assets/imgs/3d/rocket.png";
-import person from "../assets/imgs/3d/person.png";
+import rocket from "../assets/imgs/3d/rocket.webp";
+import person from "../assets/imgs/3d/person.webp";
 
 // Voice Lines And Sound
 import BreakSound from "../assets/sound/freesound_community-brake-6315.mp3";
@@ -42,6 +42,7 @@ export default function LongWaySection({
   const [toggleNewItems, setToggleNewItems] = useState(false);
 
   useGSAP(() => {
+    scrollSmoother.paused(false);
     const observer = Observer.create({
       target: window,
       type: "wheel,touch",

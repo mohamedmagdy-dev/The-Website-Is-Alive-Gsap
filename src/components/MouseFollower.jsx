@@ -5,8 +5,8 @@ import { useRef, useState } from "react";
 
 // Import Imgs
 
-import shockedDog from "../assets/imgs/bg/shocked.png";
-import happyDog from "../assets/imgs/bg/happy.png";
+import shockedDog from "../assets/imgs/bg/shocked.webp";
+import happyDog from "../assets/imgs/bg/happy.webp";
 
 export default function MouseFollower() {
   const dogRef = useRef(null);

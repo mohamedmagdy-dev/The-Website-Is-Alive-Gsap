@@ -92,7 +92,7 @@ export default function App() {
                 hideMe={setHideHeroSection}
               />
             )}
-            {hideHeroSection && hideLongSection && (
+            {hideHeroSection && !hideLongSection && (
               <LongWaySection
                 scrollSmoother={scrollSmoother}
                 hideMe={setHideLongSection}
@@ -102,7 +102,10 @@ export default function App() {
 
             {/* Real Work */}
             {showRealWork && hideLongSection && (
-              <RealWorkSection showRealWork={showRealWork} />
+              <RealWorkSection
+                showRealWork={showRealWork}
+                scrollSmoother={scrollSmoother}
+              />
             )}
           </div>
         </div>
@@ -111,10 +114,11 @@ export default function App() {
   );
 }
 
-function RealWorkSection({ showRealWork }) {
+function RealWorkSection({ showRealWork, scrollSmoother }) {
   // Handel Hide Header When Scroll
   useGSAP(() => {
     if (showRealWork) {
+      scrollSmoother.paused(false);
       let showHeader = gsap
         .from("header", {
           yPercent: -100,
