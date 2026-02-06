@@ -152,20 +152,23 @@ export default function AllowVoice({ hideMe }) {
           onComplete: () => {
             document.querySelector(".real-go-btn").onclick = (e) => {
               // Start Voice Over 2
-              voiceLine2.play();
+              setTimeout(() => {
+                voiceLine2.play();
+              }, 1500);
               e.target.style.display = "none";
               // Here Animation Of Moving Loader
               tl.to(".allow-voice-section", {
+
                 xPercent: 100,
                 duration: 3,
-                delay: 4,
+                delay: 5,
               });
 
               tl.to(".move-section", {
                 xPercent: 100,
                 duration: 3,
                 onComplete: () => {
-                  hideMe(false);
+                  hideMe(true);
                 },
               });
             };

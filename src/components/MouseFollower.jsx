@@ -45,7 +45,7 @@ export default function MouseFollower() {
   return (
     <div
       ref={dogRef}
-      className="fixed top-0 left-0 w-12 h-12 pointer-events-none z-99"
+      className="fixed top-0 left-0 w-12 h-12 pointer-events-none z-99 select-none"
       style={{
         backgroundImage: `url(${shownDog})`,
         backgroundRepeat: "no-repeat",

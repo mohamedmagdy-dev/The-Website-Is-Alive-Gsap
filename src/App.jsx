@@ -16,9 +16,15 @@ import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 export default function App() {
-  const [hideAllowVoice, setHideAllowVoice] = useState(true);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [hideAllowVoice, setHideAllowVoice] = useState(false); // default false
+  // For If website loaded
+  const [isLoaded, setIsLoaded] = useState(false); // default false
+
+  // For Loader Animation is Done
   const [loaderAnimationDone, setLoaderAnimationDone] = useState(false);
+
+  const [hideHeroSection, setHideHeroSection] = useState(false);
+
   const scrollSmoother = ScrollSmoother.create({
     smooth: 0.6,
     effects: true,
@@ -51,16 +57,22 @@ export default function App() {
   return (
     <>
       <MouseFollower />
-      {/* <Loader isAnimationEnd={setLoaderAnimationDone} /> */}
+      <Loader isAnimationEnd={setLoaderAnimationDone} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <div className="overflow-hidden">
-            {/* {hideAllowVoice && isLoaded && loaderAnimationDone && (
-          <AllowVoiceSection hideMe={setHideAllowVoice} />
-        )} */}
-            {/* {!hideAllowVoice && <HeroSection />} */}
-            {/* <HeroSection stopScroll={scrollSmoother} /> */}
-            <LongWaySection scrollSmoother={scrollSmoother} />
+            {!hideAllowVoice && isLoaded && loaderAnimationDone && (
+              <AllowVoiceSection hideMe={setHideAllowVoice} />
+            )}
+            {hideAllowVoice && (
+              <HeroSection
+                scrollSmoother={scrollSmoother}
+                hideMe={setHideHeroSection}
+              />
+            )}
+            {hideHeroSection && (
+              <LongWaySection scrollSmoother={scrollSmoother} />
+            )}
           </div>
         </div>
       </div>

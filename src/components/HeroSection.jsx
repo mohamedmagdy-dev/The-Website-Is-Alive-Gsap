@@ -15,15 +15,23 @@ import BgImg4 from "../assets/imgs/3d/Pineapple.png";
 
 import { useRef } from "react";
 
-export default function HeroSection({ stopScroll }) {
+export default function HeroSection({ scrollSmoother, hideMe }) {
   const heroSectionRef = useRef(null);
   const voiceLine3 = new Audio(voice3);
   const voiceLine3_1 = new Audio(voice3_1);
   // Stop Scroll
-  stopScroll.paused(true);
+
   useGSAP(() => {
     const tl = gsap.timeline({
       ease: "elastic",
+    });
+
+    // Add Delay For Section
+    tl.to(".bg-img", {
+      delay: 1,
+      onStart: () => {
+        scrollSmoother.paused(true);
+      },
     });
     const heroText = gsap.utils.toArray(".hero-text");
     heroText.forEach((text) => {
@@ -83,35 +91,51 @@ export default function HeroSection({ stopScroll }) {
           voiceLine3_1.play();
         }, 20000);
       },
+      // Show Long Way Section
+      onStart: () => {
+        hideMe(true);
+      },
+    });
+
+    // Start Scrolling After Finish All Voice Lines
+    tl.to(".hero-section", {
+      delay: 34.5,
+      duration: 2,
+      xPercent: 100,
+
+      onComplete: () => {
+        scrollSmoother.paused(false);
+        document.body.style.overflow = "auto";
+      },
     });
   });
-  // Start Scrolling After Finish All Voice Lines
-  setTimeout(() => {
-    stopScroll.paused(false);
-  }, 30000);
 
   return (
     <div
       ref={heroSectionRef}
-      className="hero-section relative w-full h-screen bg-[#ebe8d5] flex items-center justify-center flex-col font-bold"
+      className="hero-section z-20 relative w-full h-screen bg-[#ebe8d5] flex items-center justify-center flex-col font-bold"
     >
       <div className="flex items-center gap-5">
-        <span className="hero-text lg:text-6xl">WE DON't WRITE</span>
-        <img src={BgImg1} alt="bg1" className="bg-img  w-30 " />
+        <span className="hero-text text-lg lg:text-6xl">WE DON't WRITE</span>
+        <img src={BgImg1} alt="bg1" className="bg-img w-18 lg:w-30 " />
       </div>
-      <div className="flex items-center gap-5">
-        <img src={BgImg2} alt="bg2" className="bg-img  w-40" />
-        <span className="hero-text rotated-item lg:text-[250px] text-[#d63838]">
+      <div className="flex items-center gap-5 max-md:m-20">
+        <img src={BgImg2} alt="bg2" className="bg-img w-20 lg:w-40" />
+        <span className="hero-text rotated-item text-2xl lg:text-[250px] text-[#d63838]">
           CODE
         </span>
       </div>
-      <div className="flex items-center gap-5">
-        <span className="hero-text drop-item lg:text-6xl">WE CREATE</span>
-        <img src={BgImg4} alt="bg4" className="bg-img w-20" />
+      <div className="flex items-center gap-5 max-md:m-20">
+        <span className="hero-text drop-item lg:text-6xl max-md:-mt-20">
+          WE CREATE
+        </span>
+        <img src={BgImg4} alt="bg4" className="bg-img w-15 lg:w-20 " />
       </div>
-      <div className="flex items-center gap-5">
-        <img src={BgImg3} alt="bg3" className="bg-img w-40" />
-        <span className="hero-text lg:text-[250px] text-[#d63838]">ART</span>
+      <div className="flex items-center gap-5 max-md:m-20">
+        <img src={BgImg3} alt="bg3" className="bg-img  w-20 lg:w-40" />
+        <span className="hero-text text-2xl lg:text-[250px] text-[#d63838]">
+          ART
+        </span>
       </div>
     </div>
   );
