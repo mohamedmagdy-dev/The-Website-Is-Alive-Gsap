@@ -141,12 +141,13 @@ export default function AllowVoice({ hideMe }) {
         }, 3000);
         // Hide Fake Button
         tl.to(".fake-go-btn", {
+          delay: 1,
           ease: "power4.out",
           autoAlpha: 0,
         });
         // Show Real Go Button
         tl.to(".real-go-btn", {
-          delay: 9.5,
+          delay: 10.5,
           ease: "power4.out",
           autoAlpha: 1,
           onComplete: () => {

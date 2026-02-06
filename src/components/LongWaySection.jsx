@@ -20,7 +20,11 @@ import voice3_5 from "../assets/voice/3.5.mp3";
 import voice3_6 from "../assets/voice/3.6.mp3";
 import voice4 from "../assets/voice/4.mp3";
 
-export default function LongWaySection({ scrollSmoother, hideMe }) {
+export default function LongWaySection({
+  scrollSmoother,
+  hideMe,
+  showRealWorkSection,
+}) {
   // Voice Lines And Sound
   const BreakSoundEl = new Audio(BreakSound);
   const voiceLine3_2 = new Audio(voice3_2);
@@ -163,13 +167,17 @@ export default function LongWaySection({ scrollSmoother, hideMe }) {
       )}
 
       {toggleNewItems && (
-        <NewItems toggleNewItems={toggleNewItems} hideMe={hideMe} />
+        <NewItems
+          toggleNewItems={toggleNewItems}
+          hideMe={hideMe}
+          showRealWorkSection={showRealWorkSection}
+        />
       )}
     </div>
   );
 }
 
-function NewItems({ toggleNewItems, hideMe }) {
+function NewItems({ toggleNewItems, hideMe, showRealWorkSection }) {
   const voiceLine4 = new Audio(voice4);
   useGSAP(() => {
     if (toggleNewItems) {
@@ -330,6 +338,7 @@ function NewItems({ toggleNewItems, hideMe }) {
             voiceLine4.play();
             setTimeout(() => {
               hideMe(true);
+              showRealWorkSection(true);
             }, 2000);
           },
         },
