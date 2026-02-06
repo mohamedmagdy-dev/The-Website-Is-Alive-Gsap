@@ -32,7 +32,7 @@ export default function HeroSection() {
       </div>
 
       <div className="hero-text">
-        <p className="absolute w-90 right-5  lg:right-50 bottom-90 lg:bottom-50 text-2xl font-semibold text-[#11255c]">
+        <p className="absolute w-90 right-5  lg:right-50 bottom-90 lg:bottom-50 text-2xl  text-[#11255c]">
           Make the most of your game time with G203 gaming mouse available in a
           variety of vibrant colors desk.
         </p>

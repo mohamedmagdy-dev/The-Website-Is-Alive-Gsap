@@ -92,7 +92,7 @@ export default function App() {
                 hideMe={setHideHeroSection}
               />
             )}
-            {hideHeroSection && !hideLongSection && (
+            {hideHeroSection && hideLongSection && (
               <LongWaySection
                 scrollSmoother={scrollSmoother}
                 hideMe={setHideLongSection}

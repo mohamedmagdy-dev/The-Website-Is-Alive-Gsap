@@ -147,7 +147,7 @@ export default function AllowVoice({ hideMe }) {
         });
         // Show Real Go Button
         tl.to(".real-go-btn", {
-          delay: 10.5,
+          delay: 8.5,
           ease: "power4.out",
           autoAlpha: 1,
           onComplete: () => {
