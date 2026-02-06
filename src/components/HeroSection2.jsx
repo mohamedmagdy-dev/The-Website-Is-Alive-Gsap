@@ -8,7 +8,7 @@ export default function HeroSection() {
       <h1 className="absolute text-[#a089e0] left-[50%] translate-x-[-50%] top-25 text-center text-7xl  lg:text-[150px] leading-none font-bold">
         READY TO <br /> PLAY
       </h1>
-      <div className="mouse-img white-mouse-img w-100 lg:w-130 absolute z-10 -bottom-100 lg:-bottom-140 left-[50%] translate-x-[-50%] ">
+      <div className="mouse-img white-mouse-img w-80 lg:w-130 absolute z-10 -bottom-100 lg:-bottom-140 left-[50%] translate-x-[-50%] ">
         <img
           src={g102TopWhiteImg}
           alt="g102WhiteTopWhiteImg"
@@ -31,7 +31,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="hero-text">
+      <div className="hero-text  hidden lg:block">
         <p className="absolute w-90 right-5  lg:right-50 bottom-90 lg:bottom-50 text-2xl  text-[#11255c]">
           Make the most of your game time with G203 gaming mouse available in a
           variety of vibrant colors desk.

@@ -353,7 +353,7 @@ function NewItems({ toggleNewItems, hideMe, showRealWorkSection }) {
       {/* First Bulk */}
       <div className="absolute text-center new-items-1">
         <p className="relative">
-          <span className="lg:text-[200px] text-4xl font-bold text-[#283982]">
+          <span className="lg:text-[200px] text-8xl font-bold text-[#283982]">
             Web
           </span>
           <span className="pl-10 pr-10 pt-2 pb-2 absolute -left-20 top-[40%] rotate-2 rounded-full bg-white text-lg text-[#283982]">
@@ -361,7 +361,7 @@ function NewItems({ toggleNewItems, hideMe, showRealWorkSection }) {
           </span>
         </p>
         <p className="-mt-20 relative">
-          <span className="lg:text-[200px] text-4xl font-bold text-[#283982]">
+          <span className="lg:text-[200px] text-8xl font-bold text-[#283982]">
             Toso
           </span>
           <span className="pl-10 pr-10 pt-2 pb-2 absolute -right-20 top-[40%] -rotate-2 rounded-full bg-white text-lg text-[#283982]">

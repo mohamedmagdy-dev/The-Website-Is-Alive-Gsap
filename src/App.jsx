@@ -48,7 +48,7 @@ export default function App() {
   const scrollSmoother = ScrollSmoother.create({
     smooth: 0.6,
     effects: true,
-    smoothTouch: 0.1,
+    smoothTouch: 0.8,
     wrapper: "#smooth-wrapper",
     content: "#smooth-content",
   });

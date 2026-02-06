@@ -46,7 +46,7 @@ export default function AboutMouse() {
           className="w-full h-full scale-0 aspect-video"
         />
 
-        <p className=" font-semibold text-[#00b7fa]">
+        <p className=" font-semibold text-[#00b7fa] p-3">
           Adjustable DPI: 200–8,000 DPI,
           <br /> 6 programmable buttons,
           <br /> 1000 Hz polling rate (1ms),
